@@ -5,7 +5,7 @@ Please study the diagram and **create and implement the missing interfaces and c
 
 Hint: notice that we created a package called `land` for land-specific classes and interfaces. Consider creating a `water` package in kind.
 
-![](composition-loose-coupled.png)
+![](composition_uml.png)
 
 ## MVP
 - create an `IWaterVehicle` interface, with the correct abstract methods.
