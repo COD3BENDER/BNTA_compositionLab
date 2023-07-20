@@ -10,16 +10,24 @@ public class Plane extends Vehicle implements IAirVehicle, IMotorised {
     String airCraftType;
     IMotorised engine;
     Radar radar;
-    private int fuel;
 
 
-    public Plane(float weight, int maxSpeed, IProduct baseProduct, String takeOffType, String airCraftType, IMotorised engine, Radar radar, int fuel) {
+    public Plane(
+
+            float weight,
+            int maxSpeed,
+            IProduct baseProduct,
+            String takeOffType,
+            String airCraftType,
+            IMotorised engine,
+            Radar radar
+            ) {
+
         super(weight, maxSpeed, baseProduct);
         this.takeOffType = takeOffType;
         this.airCraftType = airCraftType;
         this.engine = engine;
         this.radar = radar;
-        this.fuel = fuel;
     }
 
     public String getTakeOffType() {
@@ -33,32 +41,32 @@ public class Plane extends Vehicle implements IAirVehicle, IMotorised {
 
     @Override
     public void startEngine() {
-
+        this.engine.startEngine();
     }
 
     @Override
     public void stopEngine() {
-
+        this.engine.stopEngine();
     }
 
     @Override
     public int getHp() {
-        return this.hp;
+        return this.engine.getHp();
     }
 
     @Override
     public void setHp(int hp) {
-    this.hp = hp
+        this.engine.setHp(hp);
     }
 
     @Override
     public int getFuel() {
-        return this.fuel;
+        return this.engine.getFuel();
     }
 
     @Override
     public void setFuel(int fuel) {
-        this.fuel = fuel;
+        this.engine.setFuel(fuel);
     }
 
     @Override
@@ -68,7 +76,7 @@ public class Plane extends Vehicle implements IAirVehicle, IMotorised {
 
     @Override
     public void setAircraftType(String aircraftType) {
-        this. = aircraftType;
+        this.airCraftType = aircraftType;
 
     }
 }
